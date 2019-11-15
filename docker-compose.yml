@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+  redis:
+    image: redis:latest
+    networks:
+      - backend
+
+  api_proxy:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      BNET_APPLICATION_ID:
+      BNET_APPLICATION_SECRET:
+      USE_CACHE: "true"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    networks:
+      - backend
+    ports:
+      - ${PORT}:4567
+    depends_on:
+      - redis
+
+networks:
+  backend:

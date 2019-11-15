@@ -1,0 +1,31 @@
+inherit_from: .rubocop_todo.yml
+
+Metrics/LineLength:
+  Max: 400
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - 'db/**/*'
+
+Metrics/AbcSize:
+  Max: 60
+  Exclude:
+    - 'db/**/*'
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/BlockLength:
+  Max: 30
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/schema.rb'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'generator_templates/**/*'
+    - 'builds/**/*'
