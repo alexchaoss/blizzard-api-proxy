@@ -2,6 +2,8 @@
 
 require 'sinatra'
 require 'blizzard_api'
+require 'thread'
+require 'thwait'
 
 set :bind, '0.0.0.0'
 
@@ -631,4 +633,26 @@ end
 
 get '/profile/user/wow/collections/pets' do
   api_client.profile(params[:token]).pets.to_json
+end
+
+# ######################################################################################################################
+# Enhancements
+# ######################################################################################################################
+
+get '/profile/user/wow/complete' do
+  profile_data = api_client.profile(params[:token]).get
+  character_list = []
+
+  threads = []
+  profile_data[:wow_accounts].each do |account|
+    account[:characters].each do |character|
+      threads << Thread.new do
+        character_data = api_client.character_profile.get(character[:realm][:slug], character[:name])
+        character_data[:media] = api_client.character_profile.media(character[:realm][:slug], character[:name])
+        character_list << character_data
+      end
+    end
+  end
+  ThreadsWait.all_waits(*threads)
+  character_list.to_json
 end
