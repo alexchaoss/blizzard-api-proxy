@@ -48,7 +48,17 @@ Assuming you started your instance on port 3000:
 
 becomes
 
-`http://127.0.0.1:3000/data/wow/achievement-category/index` 
+`http://127.0.0.1:3000/data/wow/achievement-category/index`
+
+**Profile endpoints**
+
+For account endpoints a token created using the OAuth2 authorization flow must be supplied as a query string param:
+
+`https://us.api.blizzard.com/profile/user/wow?namespace=profile-us`
+
+becomes
+
+`http://127.0.0.1:3000/profile/user/wow?token=<user_token>`
 
 ## Know issues
 
