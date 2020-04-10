@@ -1,0 +1,1 @@
+web: bundle exec ruby blizzard_api_proxy.rb -p $PORT
