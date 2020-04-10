@@ -10,6 +10,10 @@ With this proxy your client credentials can be stored safely on the server and s
 
 ## Usage
 
+**Heroku**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 **Docker**
 
 Create a `.env` file containing the following environment variables:

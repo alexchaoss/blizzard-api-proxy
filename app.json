@@ -1,0 +1,24 @@
+{
+  "name": "Blizzard API proxy",
+  "description": "Simple proxy to Blizzard API written in Ruby/Sinatra",
+  "repository": "https://gitlab.com/francisschiavo/blizzard-api-proxy",
+  "keywords": ["blizzard", "api", "proxy", "ruby", "sinatra"],
+  "env": {
+    "BNET_APPLICATION_ID": {
+      "description": "The Client ID from develop.battle.net",
+      "value": ""
+    },
+    "BNET_APPLICATION_SECRET": {
+      "description": "The Client Secret from develop.battle.net",
+      "value": ""
+    },
+    "REGION": {
+      "description": "The region to use with the API client",
+      "value": "us"
+    },
+    "PORT": {
+      "description": "App port",
+      "value": "80"
+    }
+  }
+}
