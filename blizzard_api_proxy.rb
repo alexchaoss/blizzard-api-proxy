@@ -6,7 +6,7 @@ require 'thread'
 require 'thwait'
 
 BlizzardApi.configure do |config|
-  config.region = ENV.fetch 'REGION', 'kr'
+  config.region = ENV.fetch 'REGION', 'us'
   config.app_id = ENV.fetch 'BNET_APPLICATION_ID'
   config.app_secret = ENV.fetch 'BNET_APPLICATION_SECRET'
 
@@ -19,6 +19,8 @@ end
 
 before do
   content_type :json
+  @region = BlizzardApi.region
+  @region = @request.params['region'] if @request.params.key? 'region'
 end
 
 error BlizzardApi::ApiException do |e|
@@ -26,8 +28,12 @@ error BlizzardApi::ApiException do |e|
   { error: e.message }.to_json
 end
 
+not_found do
+  { status: 'Not found' }.to_json
+end
+
 get '/' do
-  { status: "Running" }.to_json
+  { status: 'Running' }.to_json
 end
 
 require_relative 'api/hs'
