@@ -5,8 +5,6 @@ require 'blizzard_api'
 require 'thread'
 require 'thwait'
 
-set :bind, '0.0.0.0'
-
 BlizzardApi.configure do |config|
   config.region = ENV.fetch 'REGION', 'kr'
   config.app_id = ENV.fetch 'BNET_APPLICATION_ID'
