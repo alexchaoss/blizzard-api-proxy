@@ -19,6 +19,10 @@
     "PORT": {
       "description": "App port",
       "value": "80"
+    },
+    "CORS_ORIGIN": {
+      "description": "CORS allowed origins",
+      "value": "*"
     }
   }
 }
