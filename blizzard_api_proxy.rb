@@ -42,6 +42,7 @@ get '/' do
   { status: 'Running' }.to_json
 end
 
+require_relative 'api/token_map'
 require_relative 'api/hs'
 require_relative 'api/wow'
 require_relative 'api/d3'

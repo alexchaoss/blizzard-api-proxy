@@ -62,19 +62,23 @@ end
 # D3 Profile API
 
 get '/d3/profile/:account/' do |account|
-  d3_api_client.profile(@region).index(account, params[:token], @options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  d3_api_client.profile(@region).index(account, access_token, @options).to_json
 end
 
 get '/d3/profile/:account/hero/:id' do |account, slug|
-  d3_api_client.profile(@region).hero(account, params[:token], slug, @options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  d3_api_client.profile(@region).hero(account, access_token, slug, @options).to_json
 end
 
 get '/d3/profile/:account/hero/:id/items' do |account, slug|
-  d3_api_client.profile(@region).hero_items(account, params[:token], slug, @options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  d3_api_client.profile(@region).hero_items(account, access_token, slug, @options).to_json
 end
 
 get '/d3/profile/:account/hero/:id/follower-items' do |account, slug|
-  d3_api_client.profile(@region).hero_follower_items(account, params[:token], slug, @options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  d3_api_client.profile(@region).hero_follower_items(account, access_token, slug, @options).to_json
 end
 
 # ######################################################################################################################

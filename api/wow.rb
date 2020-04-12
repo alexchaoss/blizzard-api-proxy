@@ -584,24 +584,29 @@ end
 
 # Account Profile API
 get '/profile/user/wow' do
-  wow_api_client.profile(params[:token], @region).get(@options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  wow_api_client.profile(access_token, @region).get(@options).to_json
 end
 
 get '/profile/user/wow/protected-character/:realm_character' do |realm_character|
+  access_token = TokenMap.instance.get params[:token]
   realm, character = realm_character.split('-')
-  wow_api_client.profile(params[:token], @region).protected_character(realm, character, @options).to_json
+  wow_api_client.profile(access_token, @region).protected_character(realm, character, @options).to_json
 end
 
 get '/profile/user/wow/collections' do
-  wow_api_client.profile(params[:token], @region).collections(@options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  wow_api_client.profile(access_token, @region).collections(@options).to_json
 end
 
 get '/profile/user/wow/collections/mounts' do
-  wow_api_client.profile(params[:token], @region).mounts(@options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  wow_api_client.profile(access_token, @region).mounts(@options).to_json
 end
 
 get '/profile/user/wow/collections/pets' do
-  wow_api_client.profile(params[:token], @region).pets(@options).to_json
+  access_token = TokenMap.instance.get params[:token]
+  wow_api_client.profile(access_token, @region).pets(@options).to_json
 end
 
 # ######################################################################################################################
