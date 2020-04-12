@@ -5,7 +5,7 @@ require 'sinatra/cors'
 require 'blizzard_api'
 require 'thread'
 
-COMMON_OPTIONS = %w[locale classic]
+COMMON_OPTIONS = %w[locale classic ignore_cache ttl]
 
 set :bind, '0.0.0.0'
 set :allow_origin, ENV.fetch('CORS_ORIGIN', '*')
