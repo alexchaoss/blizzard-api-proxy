@@ -1,5 +1,6 @@
 require 'blizzard_api'
 require 'sinatra'
+require 'thwait'
 
 wow_api_client = BlizzardApi::Wow
 
