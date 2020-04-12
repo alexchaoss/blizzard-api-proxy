@@ -614,10 +614,11 @@ end
 # ######################################################################################################################
 
 get '/profile/user/wow/complete' do
+  access_token = TokenMap.instance.get params[:token]
   opts = {}
   opts[:locale] = params[:locale] if params.key? :locale
 
-  profile_data = wow_api_client.profile(params[:token]).get
+  profile_data = wow_api_client.profile(access_token, @region).get
   character_list = []
 
   threads = []
