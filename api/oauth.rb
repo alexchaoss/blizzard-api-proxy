@@ -1,7 +1,7 @@
 require 'net/http'
 require 'uri'
 
-get 'oauth/token' do
+get '/oauth/token' do
   region = params[:region]
   redirect_uri = params[:redirect_uri]
   code = params[:code]
@@ -17,5 +17,5 @@ get 'oauth/token' do
   request.set_form_data grant_type: 'authorization_code', redirect_uri: redirect_uri, code: code
 
   response = http.request(request)
-  JSON.parse(response.body)['access_token']
+  response.body
 end
