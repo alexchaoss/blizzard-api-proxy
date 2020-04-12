@@ -5,7 +5,7 @@ require 'sinatra/cors'
 require 'blizzard_api'
 require 'thread'
 
-COMMON_OPTION = %w[locale]
+COMMON_OPTIONS = %w[locale classic]
 
 set :bind, '0.0.0.0'
 set :allow_origin, ENV.fetch('CORS_ORIGIN', '*')
@@ -26,7 +26,7 @@ before do
   content_type :json
   @region = BlizzardApi.region
   @region = @request.params['region'] if @request.params.key? 'region'
-  @options = @request.params.select { |key| COMMON_OPTION.include? key  }
+  @options = @request.params.select { |key| COMMON_OPTIONS.include? key  }
 end
 
 error BlizzardApi::ApiException do |e|
