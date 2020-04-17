@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    blizzard_api (0.3.10)
+    blizzard_api (0.3.11)
       redis (~> 4.1, >= 4.1.0)
     jaro_winkler (1.5.4)
     mustermann (1.1.1)
@@ -39,7 +39,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blizzard_api (~> 0.3.10)
+  blizzard_api (~> 0.3.11)
   rubocop
   sinatra
   sinatra-cors
