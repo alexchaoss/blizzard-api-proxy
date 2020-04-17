@@ -283,6 +283,32 @@ get '/data/wow/power-type/:id' do |id|
   wow_api_client.power_type(@region).get(id, @options).to_json
 end
 
+# Profession API
+
+get '/data/wow/profession/index' do
+  wow_api_client.profession(@region).index(@options).to_json
+end
+
+get '/data/wow/profession/:id' do |id|
+  wow_api_client.profession(@region).get(id, @options).to_json
+end
+
+get '/data/wow/media/profession/:id' do |id|
+  wow_api_client.profession(@region).media(id, @options).to_json
+end
+
+get '/data/wow/profession/:id/skill-tier/:skill_tier_id' do |id, skill_tier_id|
+  wow_api_client.profession(@region).skill_tier(id, skill_tier_id, @options).to_json
+end
+
+get '/data/wow/recipe/:id' do |id|
+  wow_api_client.profession(@region).recipe(id, @options).to_json
+end
+
+get '/data/wow/media/recipe/:id' do |id|
+  wow_api_client.profession(@region).recipe_media(id, @options).to_json
+end
+
 # PvP Season API
 
 get '/data/wow/pvp-season/index' do

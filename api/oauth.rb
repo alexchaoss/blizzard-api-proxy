@@ -22,7 +22,7 @@ get '/oauth/token' do
 
   if response.code.to_i == 200
     session_key = TokenMap.instance.set(data['access_token'])
-    data[:access_token] = session_key
+    data['access_token'] = session_key
   end
 
   data.to_json

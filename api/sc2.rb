@@ -18,22 +18,27 @@ end
 # ######################################################################################################################
 
 get '/sc2/static/profile/:region_id' do |region_id|
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.profile(@region).static(region_id.to_sym, @options).to_json
 end
 
 get '/sc2/metadata/profile/:region_id/:realm_id/:profile_id ' do |region_id, realm_id, profile_id|
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.profile(@region).metadata(region_id.to_sym, realm_id, profile_id, @options).to_json
 end
 
 get '/sc2/profile/:region_id/:realm_id/:profile_id' do |region_id, realm_id, profile_id|
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.profile(@region).profile(region_id.to_sym, realm_id, profile_id, @options).to_json
 end
 
 get '/sc2/profile/:region_id/:realm_id/:profile_id/ladder/summary ' do |region_id, realm_id, profile_id|
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.profile(@region).ladder_summary(region_id.to_sym, realm_id, profile_id, @options).to_json
 end
 
 get '/sc2/profile/:region_id/:realm_id/:profile_id/ladder/:id ' do |region_id, realm_id, profile_id, id|
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.profile(@region).ladder(region_id.to_sym, realm_id, profile_id, id, @options).to_json
 end
 
@@ -50,7 +55,6 @@ end
 # Player API
 
 get '/sc2/player/:account_id' do |account_id|
-  @options
-  @options[:token] = params[:token] if params[:token]
+  @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.account(@region).player(account_id, @options).to_json
 end
