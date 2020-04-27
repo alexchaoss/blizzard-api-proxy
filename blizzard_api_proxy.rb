@@ -29,11 +29,6 @@ before do
   @options = @request.params.select { |key| COMMON_OPTIONS.include? key  }
 end
 
-error BlizzardApi::ApiException do |e|
-  status 500
-  { error: e.message }.to_json
-end
-
 not_found do
   { status: 'Not found' }.to_json
 end
@@ -48,3 +43,8 @@ require_relative 'api/wow'
 require_relative 'api/d3'
 require_relative 'api/sc2'
 require_relative 'api/oauth'
+
+error BlizzardApi::ApiException do |e|
+  status e.code
+  { error: e.message }.to_json
+end
