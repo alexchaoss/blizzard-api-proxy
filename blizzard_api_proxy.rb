@@ -26,7 +26,18 @@ before do
   content_type :json
   @region = BlizzardApi.region
   @region = @request.params['region'] if @request.params.key? 'region'
-  @options = @request.params.select { |key| COMMON_OPTIONS.include? key  }
+  @options = {}
+  @request.params.each do |key, value|
+    next unless COMMON_OPTIONS.include? key
+
+    if %w[classic ignore_cache].include? :key
+      @options[key.to_sym] = !!value
+    elsif key.eql? 'ttl'
+      @options[key.to_sym] = value.to_i
+    else
+      @options[key.to_sym] = value
+    end
+  end
 end
 
 not_found do

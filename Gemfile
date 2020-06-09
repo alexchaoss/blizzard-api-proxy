@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'blizzard_api', '~> 0.3.11'
+gem 'blizzard_api', '~> 0.4.1'
 gem 'sinatra'
 gem 'sinatra-cors'
 gem 'thwait'

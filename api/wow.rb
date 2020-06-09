@@ -231,6 +231,22 @@ get '/data/wow/pet/:id' do |id|
   wow_api_client.pet(@region).get(id, @options).to_json
 end
 
+get '/data/wow/media/pet/:id' do |id|
+  wow_api_client.pet(@region).media(id, @options).to_json
+end
+
+get '/data/wow/pet-ability/index' do
+  wow_api_client.pet(@region).abilities(@options).to_json
+end
+
+get '/data/wow/pet-ability/:id' do |id|
+  wow_api_client.pet(@region).ability(id, @options).to_json
+end
+
+get '/data/wow/media/pet-ability/:id' do |id|
+  wow_api_client.pet(@region).ability_media(id, @options).to_json
+end
+
 # Playable classe API
 
 get '/data/wow/playable-class/index' do
