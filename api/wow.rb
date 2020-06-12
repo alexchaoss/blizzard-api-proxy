@@ -677,3 +677,30 @@ get '/profile/user/wow/complete' do
   ThreadsWait.all_waits(*threads)
   character_list.to_json
 end
+
+get '/data/wow/guild/:realm/:guild/roster/complete' do |realm, guild|
+  guild_data = wow_api_client.guild(@region).roster(realm, guild, @options)
+
+  members = guild_data[:members]
+  complete_data = []
+  threads = []
+
+  90.times do
+    threads << Thread.new do
+      while true do
+        member = members.pop
+        break unless member
+
+        begin
+          character_data = wow_api_client.character_profile(@region).get(member[:character][:realm][:slug], member[:character][:name], @options)
+          complete_data << character_data
+        rescue
+          # Ignore any exception
+        end
+      end
+    end
+  end
+  ThreadsWait.all_waits(*threads)
+  guild_data[:members] = complete_data
+  guild_data.to_json
+end
