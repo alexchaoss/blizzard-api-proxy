@@ -3,9 +3,7 @@
 require 'sinatra'
 require 'sinatra/cors'
 require 'blizzard_api'
-require 'thread'
-
-COMMON_OPTIONS = %w[locale classic ignore_cache ttl]
+COMMON_OPTIONS = %w[locale classic ignore_cache ttl].freeze
 
 set :bind, '0.0.0.0'
 set :allow_origin, ENV.fetch('CORS_ORIGIN', '*')
@@ -31,13 +29,13 @@ before do
   @request.params.each do |key, value|
     next unless COMMON_OPTIONS.include? key
 
-    if %w[classic ignore_cache].include? :key
-      @options[key.to_sym] = !!value
-    elsif key.eql? 'ttl'
-      @options[key.to_sym] = value.to_i
-    else
-      @options[key.to_sym] = value
-    end
+    @options[key.to_sym] = if %w[classic ignore_cache].include? :key
+                             true
+                           elsif key.eql? 'ttl'
+                             value.to_i
+                           else
+                             value
+                           end
   end
 end
 

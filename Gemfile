@@ -4,11 +4,11 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'blizzard_api', '~> 0.4.1'
+gem 'blizzard_api', '~> 0.5.1'
+gem 'e2mmap'
 gem 'sinatra'
 gem 'sinatra-cors'
 gem 'thwait'
-gem 'e2mmap'
 
 group :development do
   gem 'rubocop'
