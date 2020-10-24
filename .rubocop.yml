@@ -21,6 +21,7 @@ Metrics/BlockLength:
 
 AllCops:
   TargetRubyVersion: 2.5
+  NewCops: enable
   Exclude:
     - 'vendor/**/*'
     - 'node_modules/**/*'

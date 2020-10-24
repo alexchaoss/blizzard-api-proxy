@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blizzard_api'
 require 'sinatra'
 require 'thwait'
@@ -149,6 +151,28 @@ end
 
 get '/data/wow/journal-instance/:id' do |id|
   wow_api_client.journal(@region).instance(id, @options).to_json
+end
+
+# Modified Crafting API
+
+get '/data/wow/modified-crafting/index' do
+  wow_api_client.modified_crafting(@region).index(@options).to_json
+end
+
+get '/data/wow/modified-crafting/category/index' do
+  wow_api_client.modified_crafting(@region).categories(@options).to_json
+end
+
+get '/data/wow/modified-crafting/category/:id' do |id|
+  wow_api_client.modified_crafting(@region).category(id, @options).to_json
+end
+
+get '/data/wow/modified-crafting/reagent-slot-type/index' do
+  wow_api_client.modified_crafting(@region).slot_types(@options).to_json
+end
+
+get '/data/wow/modified-crafting/reagent-slot-type/:id' do |id|
+  wow_api_client.modified_crafting(@region).slot_type(id, @options).to_json
 end
 
 # Mount API
@@ -687,14 +711,14 @@ get '/data/wow/guild/:realm/:guild/roster/complete' do |realm, guild|
 
   90.times do
     threads << Thread.new do
-      while true do
+      loop do
         member = members.pop
         break unless member
 
         begin
           character_data = wow_api_client.character_profile(@region).get(member[:character][:realm][:slug], member[:character][:name], @options)
           complete_data << character_data
-        rescue
+        rescue StandardError
           # Ignore any exception
         end
       end

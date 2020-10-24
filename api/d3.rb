@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blizzard_api'
 require 'sinatra'
 

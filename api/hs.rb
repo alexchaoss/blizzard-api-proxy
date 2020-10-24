@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blizzard_api'
 require 'sinatra'
 
@@ -15,7 +17,7 @@ get '/hearthstone/cards' do
 end
 
 get '/hearthstone/cards/:slug' do |slug|
-  hs_api_client.card(@region).get(slug, @options).to_json
+  hs_api_client.card(@region).get(slug, 'constructed', @options).to_json
 end
 
 # Card backs
