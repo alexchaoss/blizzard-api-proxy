@@ -61,6 +61,36 @@ get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, @options).to_json
 end
 
+# Covenant API
+
+get '/data/wow/covenant/index' do
+  wow_api_client.covenant(@region).index(@options).to_json
+end
+
+get '/data/wow/covenant/:id' do |id|
+  wow_api_client.covenant(@region).get(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/:id' do |id|
+  wow_api_client.covenant(@region).media(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/soulbind/index' do
+  wow_api_client.covenant(@region).soulbinds(@options).to_json
+end
+
+get '/data/wow/media/covenant/soulbind/:id' do
+  wow_api_client.covenant(@region).soulbind(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/conduit/index' do
+  wow_api_client.covenant(@region).conduits(@options).to_json
+end
+
+get '/data/wow/media/covenant/conduit/:id' do
+  wow_api_client.covenant(@region).conduit(id, @options).to_json
+end
+
 # Creature API
 
 get '/data/wow/creature-family/index' do
@@ -485,6 +515,28 @@ get '/data/wow/pvp-talent/:id' do |id|
   wow_api_client.talent(@region).pvp_talent(id, @options).to_json
 end
 
+# Tech talent API
+
+get '/data/wow/tech-talent-tree/index' do
+  wow_api_client.tech_talent(@region).talent_trees(@options).to_json
+end
+
+get '/data/wow/tech-talent-tree/:id' do |id|
+  wow_api_client.tech_talent(@region).talent_tree(id, @options).to_json
+end
+
+get '/data/wow/tech-talent/index' do
+  wow_api_client.tech_talent(@region).index(@options).to_json
+end
+
+get '/data/wow/tech-talent/:id' do |id|
+  wow_api_client.tech_talent(@region).get(id, @options).to_json
+end
+
+get '/data/wow/media/tech-talent/:id' do |id|
+  wow_api_client.tech_talent(@region).media(id, @options).to_json
+end
+
 # Titles
 
 get '/data/wow/title/index' do
@@ -605,6 +657,12 @@ end
 
 get '/profile/wow/character/:realm/:character/quests/completed' do |realm, character|
   wow_api_client.character_profile(@region).quests(realm, character, true, @options).to_json
+end
+
+# Character Soulbinds API
+
+get '/profile/wow/character/:realm/:character/soulbinds' do |realm, character|
+  wow_api_client.character_profile(@region).soulbinds(realm, character, @options).to_json
 end
 
 # Character Reputations API

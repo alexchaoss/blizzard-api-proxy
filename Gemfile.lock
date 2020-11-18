@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.1)
-    blizzard_api (0.5.1)
+    blizzard_api (0.5.2)
       redis (~> 4.1, >= 4.1.0)
     e2mmap (0.1.0)
     mustermann (1.1.1)
@@ -14,7 +14,7 @@ GEM
     rack-protection (2.1.0)
       rack
     rainbow (3.0.0)
-    redis (4.2.2)
+    redis (4.2.3)
     regexp_parser (1.8.2)
     rexml (3.2.4)
     rubocop (1.0.0)
@@ -45,7 +45,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blizzard_api (~> 0.5.1)
+  blizzard_api (~> 0.5.2)
   e2mmap
   rubocop
   sinatra
