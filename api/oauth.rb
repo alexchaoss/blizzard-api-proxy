@@ -7,8 +7,10 @@ get '/oauth/token' do
   region = params[:region] || BlizzardApi.region
   redirect_uri = params[:redirect_uri]
   code = params[:code]
-
-  uri = URI.parse("https://#{region}.battle.net/oauth/token")
+  if region.casecmp("cn")
+    uri = URI.parse("www.battlenet.com.cn/oauth/token")
+  else
+    uri = URI.parse("https://#{region}.battle.net/oauth/token")
 
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
@@ -33,8 +35,10 @@ end
 get '/oauth/userinfo' do
   region = params[:region] || BlizzardApi.region
   access_token = TokenMap.instance.get params[:token]
-
-  uri = URI.parse("https://#{region}.battle.net/oauth/userinfo")
+  if region.casecmp("cn")
+    uri = URI.parse("www.battlenet.com.cn/oauth/userinfo")
+  else  
+    uri = URI.parse("https://#{region}.battle.net/oauth/userinfo")
 
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
