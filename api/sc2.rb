@@ -83,7 +83,7 @@ get '/sc2/legacy/ladder/:region_id/:ladder_id' do |region_id, ladder_id|
   sc2_api_client.legacy(@region).ladder(region_id.to_sym, ladder_id, @options).to_json
 end
 
-get '/sc2/legacy/data/:achievements/:region_id' do |region_id|
+get '/sc2/legacy/data/achievements/:region_id' do |region_id|
   @options[:token] = TokenMap.instance.get(params[:token]) if params[:token]
   sc2_api_client.legacy(@region).achievements(region_id.to_sym, @options).to_json
 end
