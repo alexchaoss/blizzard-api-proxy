@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blizzard_api'
 require 'sinatra'
 require 'thwait'
@@ -57,6 +59,36 @@ end
 
 get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, @options).to_json
+end
+
+# Covenant API
+
+get '/data/wow/covenant/index' do
+  wow_api_client.covenant(@region).index(@options).to_json
+end
+
+get '/data/wow/covenant/:id' do |id|
+  wow_api_client.covenant(@region).get(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/:id' do |id|
+  wow_api_client.covenant(@region).media(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/soulbind/index' do
+  wow_api_client.covenant(@region).soulbinds(@options).to_json
+end
+
+get '/data/wow/media/covenant/soulbind/:id' do
+  wow_api_client.covenant(@region).soulbind(id, @options).to_json
+end
+
+get '/data/wow/media/covenant/conduit/index' do
+  wow_api_client.covenant(@region).conduits(@options).to_json
+end
+
+get '/data/wow/media/covenant/conduit/:id' do
+  wow_api_client.covenant(@region).conduit(id, @options).to_json
 end
 
 # Creature API
@@ -149,6 +181,28 @@ end
 
 get '/data/wow/journal-instance/:id' do |id|
   wow_api_client.journal(@region).instance(id, @options).to_json
+end
+
+# Modified Crafting API
+
+get '/data/wow/modified-crafting/index' do
+  wow_api_client.modified_crafting(@region).index(@options).to_json
+end
+
+get '/data/wow/modified-crafting/category/index' do
+  wow_api_client.modified_crafting(@region).categories(@options).to_json
+end
+
+get '/data/wow/modified-crafting/category/:id' do |id|
+  wow_api_client.modified_crafting(@region).category(id, @options).to_json
+end
+
+get '/data/wow/modified-crafting/reagent-slot-type/index' do
+  wow_api_client.modified_crafting(@region).slot_types(@options).to_json
+end
+
+get '/data/wow/modified-crafting/reagent-slot-type/:id' do |id|
+  wow_api_client.modified_crafting(@region).slot_type(id, @options).to_json
 end
 
 # Mount API
@@ -461,6 +515,28 @@ get '/data/wow/pvp-talent/:id' do |id|
   wow_api_client.talent(@region).pvp_talent(id, @options).to_json
 end
 
+# Tech talent API
+
+get '/data/wow/tech-talent-tree/index' do
+  wow_api_client.tech_talent(@region).talent_trees(@options).to_json
+end
+
+get '/data/wow/tech-talent-tree/:id' do |id|
+  wow_api_client.tech_talent(@region).talent_tree(id, @options).to_json
+end
+
+get '/data/wow/tech-talent/index' do
+  wow_api_client.tech_talent(@region).index(@options).to_json
+end
+
+get '/data/wow/tech-talent/:id' do |id|
+  wow_api_client.tech_talent(@region).get(id, @options).to_json
+end
+
+get '/data/wow/media/tech-talent/:id' do |id|
+  wow_api_client.tech_talent(@region).media(id, @options).to_json
+end
+
 # Titles
 
 get '/data/wow/title/index' do
@@ -583,6 +659,12 @@ get '/profile/wow/character/:realm/:character/quests/completed' do |realm, chara
   wow_api_client.character_profile(@region).quests(realm, character, true, @options).to_json
 end
 
+# Character Soulbinds API
+
+get '/profile/wow/character/:realm/:character/soulbinds' do |realm, character|
+  wow_api_client.character_profile(@region).soulbinds(realm, character, @options).to_json
+end
+
 # Character Reputations API
 
 get '/profile/wow/character/:realm/:character/reputations' do |realm, character|
@@ -687,14 +769,14 @@ get '/data/wow/guild/:realm/:guild/roster/complete' do |realm, guild|
 
   90.times do
     threads << Thread.new do
-      while true do
+      loop do
         member = members.pop
         break unless member
 
         begin
           character_data = wow_api_client.character_profile(@region).get(member[:character][:realm][:slug], member[:character][:name], @options)
           complete_data << character_data
-        rescue
+        rescue StandardError
           # Ignore any exception
         end
       end

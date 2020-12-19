@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'blizzard_api'
 require 'sinatra'
 
@@ -98,13 +100,13 @@ get '/data/d3/season/:id/leaderboard/:leaderboard' do |id, leaderboard_id|
 end
 
 get '/data/d3/era/' do
-  d3_api_client.season(@region).index(@options).to_json
+  d3_api_client.era(@region).index(@options).to_json
 end
 
 get '/data/d3/era/:id' do |id|
-  d3_api_client.season(@region).get(id, @options).to_json
+  d3_api_client.era(@region).get(id, @options).to_json
 end
 
 get '/data/d3/era/:id/leaderboard/:leaderboard' do |id, leaderboard_id|
-  d3_api_client.season(@region).leaderboard(id, leaderboard_id, @options).to_json
+  d3_api_client.era(@region).leaderboard(id, leaderboard_id, @options).to_json
 end
