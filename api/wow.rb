@@ -75,19 +75,19 @@ get '/data/wow/media/covenant/:id' do |id|
   wow_api_client.covenant(@region).media(id, @options).to_json
 end
 
-get '/data/wow/media/covenant/soulbind/index' do
+get '/data/wow/covenant/soulbind/index' do
   wow_api_client.covenant(@region).soulbinds(@options).to_json
 end
 
-get '/data/wow/media/covenant/soulbind/:id' do
+get '/data/wow/covenant/soulbind/:id' do
   wow_api_client.covenant(@region).soulbind(id, @options).to_json
 end
 
-get '/data/wow/media/covenant/conduit/index' do
+get '/data/wow/covenant/conduit/index' do
   wow_api_client.covenant(@region).conduits(@options).to_json
 end
 
-get '/data/wow/media/covenant/conduit/:id' do
+get '/data/wow/covenant/conduit/:id' do
   wow_api_client.covenant(@region).conduit(id, @options).to_json
 end
 

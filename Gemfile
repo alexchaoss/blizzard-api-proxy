@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'blizzard_api', '~> 0.5.2'
+gem 'blizzard_api', '~> 0.5.4'
 gem 'e2mmap'
 gem 'sinatra'
 gem 'sinatra-cors'

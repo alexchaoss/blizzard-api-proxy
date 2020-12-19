@@ -1,7 +1,7 @@
 {
   "name": "Blizzard API proxy",
   "description": "Simple proxy to Blizzard API written in Ruby/Sinatra",
-  "repository": "https://gitlab.com/francisschiavo/blizzard-api-proxy",
+  "repository": "https://github.com/francis-schiavo/blizzard-api-proxy",
   "keywords": ["blizzard", "api", "proxy", "ruby", "sinatra"],
   "env": {
     "BNET_APPLICATION_ID": {
