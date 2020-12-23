@@ -518,11 +518,11 @@ end
 # Tech talent API
 
 get '/data/wow/tech-talent-tree/index' do
-  wow_api_client.tech_talent(@region).talent_trees(@options).to_json
+  wow_api_client.tech_talent(@region).tech_talent_trees(@options).to_json
 end
 
 get '/data/wow/tech-talent-tree/:id' do |id|
-  wow_api_client.tech_talent(@region).talent_tree(id, @options).to_json
+  wow_api_client.tech_talent(@region).tech_talent_tree(id, @options).to_json
 end
 
 get '/data/wow/tech-talent/index' do
