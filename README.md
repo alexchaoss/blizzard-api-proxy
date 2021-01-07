@@ -68,6 +68,6 @@ becomes
 
 Those are some limitations for the first version that might get upgraded in the future.
 
-* Only supports one region per instance.
+* ~~Only supports one region per instance.~~ You can now specify the region as part of the query string: `&region=eu`
 * Always return data for all locales.
 * There is no security layer, if you expose the port to the web anyone can access. It should be used behind a reverse proxy with some kind of CORS policy or even a HTTP auth.
