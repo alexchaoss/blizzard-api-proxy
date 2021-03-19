@@ -695,7 +695,7 @@ get '/data/wow/guild/:realm/:guild' do |realm, guild|
   wow_api_client.guild(@region).get(realm, guild, @options).to_json
 end
 
-get '/data/wow/guild/:realm/:guild/activity' do
+get '/data/wow/guild/:realm/:guild/activity' do |realm, guild|
   wow_api_client.guild(@region).activity(realm, guild, @options).to_json
 end
 
