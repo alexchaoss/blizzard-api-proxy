@@ -33,14 +33,12 @@ module BlizzardApi
     }.freeze
 
     def base_url(scope)
-      def base_url(scope)
-        raise ArgumentError, 'Invalid scope' unless BASE_URLS.include? scope
+      raise ArgumentError, 'Invalid scope' unless BASE_URLS.include? scope
 
-        if region.eql? :cn
-          format CHINESE_BASE_URLS[scope], @game
-        else
-          format BASE_URLS[scope], region, @game
-        end
+      if region.eql? 'cn'
+        format CHINESE_URLS[scope], @game
+      else
+        format BASE_URLS[scope], region, @game
       end
     end
   end
