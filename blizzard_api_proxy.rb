@@ -32,7 +32,7 @@ module BlizzardApi
       search: 'https://gateway.battlenet.com.cn/data/%s/search'
     }.freeze
 
-    def base_url()
+    def base_url(scope)
       def base_url(scope)
         raise ArgumentError, 'Invalid scope' unless BASE_URLS.include? scope
 
