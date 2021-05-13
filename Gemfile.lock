@@ -1,36 +1,35 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.4.2)
-    blizzard_api (0.6.0)
+    ast (2.4.1)
+    blizzard_api (0.5.4)
       redis (~> 4.1, >= 4.1.0)
-      thwait (~> 0.2.0)
     e2mmap (0.1.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    parallel (1.20.1)
-    parser (3.0.1.1)
+    parallel (1.19.2)
+    parser (2.7.2.0)
       ast (~> 2.4.1)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
     rainbow (3.0.0)
     redis (4.2.5)
-    regexp_parser (2.1.1)
-    rexml (3.2.5)
-    rubocop (1.14.0)
+    regexp_parser (1.8.2)
+    rexml (3.2.4)
+    rubocop (1.0.0)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 2.7.1.5)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
+      regexp_parser (>= 1.8)
       rexml
-      rubocop-ast (>= 1.5.0, < 2.0)
+      rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.5.0)
-      parser (>= 3.0.1.1)
-    ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.4)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (1.0.1)
+      parser (>= 2.7.1.5)
+    ruby-progressbar (1.10.1)
+    ruby2_keywords (0.0.2)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -40,13 +39,13 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.10)
-    unicode-display_width (2.0.0)
+    unicode-display_width (1.7.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  blizzard_api (~> 0.6.0)
+  blizzard_api (~> 0.5.4)
   e2mmap
   rubocop
   sinatra
@@ -54,7 +53,7 @@ DEPENDENCIES
   thwait
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   2.2.3
+   2.1.4
