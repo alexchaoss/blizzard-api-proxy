@@ -2,9 +2,9 @@
 
 source 'https://rubygems.org'
 
-ruby '2.7.1'
+ruby '3.0.0'
 
-gem 'blizzard_api', '~> 0.5.4'
+gem 'blizzard_api', '~> 0.6.0'
 gem 'e2mmap'
 gem 'sinatra'
 gem 'sinatra-cors'
