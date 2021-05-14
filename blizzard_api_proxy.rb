@@ -7,6 +7,7 @@ COMMON_OPTIONS = %w[locale classic ignore_cache ttl].freeze
 
 set :bind, '0.0.0.0'
 set :allow_origin, ENV.fetch('CORS_ORIGIN', '*')
+
 use Rack::Deflater
 
 BlizzardApi.configure do |config|
