@@ -85,4 +85,4 @@ end
 
 get '/sc2/legacy/data/rewards/:region_id' do |region_id|
   sc2_api_client.legacy(@region).rewards(region_id.to_sym, **@options)&.to_json
-end
+end 
