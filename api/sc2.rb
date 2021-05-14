@@ -64,7 +64,6 @@ end
 # Legacy API
 
 get '/sc2/legacy/profile/:region_id/:realm_id/:profile_id' do |region_id, realm_id, profile_id|
-
   sc2_api_client.legacy(@region).profile(region_id.to_sym, realm_id, profile_id, **@options)&.to_json
 end
 
