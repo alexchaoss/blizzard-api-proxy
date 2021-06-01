@@ -61,7 +61,7 @@ get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, **@options)&.to_json
 end
 
-get '/data/wow/search/connected-realm/' do |id|
+get '/data/wow/search/connected-realm/' do
   wow_api_client.connected_realm(@region).get(**@options)&.to_json
 end
 
