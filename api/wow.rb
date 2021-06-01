@@ -61,6 +61,10 @@ get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, **@options)&.to_json
 end
 
+get '/data/wow/search/connected-realm/' do |id|
+  wow_api_client.connected_realm(@region).get(**@options)&.to_json
+end
+
 # Covenant API
 
 get '/data/wow/covenant/index' do
