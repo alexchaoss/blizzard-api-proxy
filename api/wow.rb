@@ -61,8 +61,12 @@ get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, @options).to_json
 end
 
-get '/data/wow/search/connected-realm/' do |search_options|
-  wow_api_client.connected_realm(@region).search(@options) {search_options}.to_json
+get '/data/wow/search/connected-realm/' do
+
+  connected_realm_data = wow_api_client.connected_realm(@region).search(@options) do |options|
+    options.order_by 'id', :desc
+  end
+  connected_realm_data.to_json
 end
 
 # Covenant API
