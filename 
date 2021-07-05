@@ -1,0 +1,515 @@
+[33mcommit 8556e0dcd0b67d4d21c54693b2bc560c7af84384[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 682a88d c74b5db
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Mon Jul 5 09:23:07 2021 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit 682a88ddcdacedaec4c6d8856dbc013e9361a1da[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sun Jul 4 23:07:14 2021 -0300
+
+    Search endpoint support
+
+[33mcommit c74b5dbeab0cd6107b2b2d4bd0fac54fb10fb634[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Jul 2 11:27:39 2021 -0400
+
+    more test searchable
+
+[33mcommit 02acae65b77038e505f5bbc689bbc57ea834ffcf[m
+Merge: e64aec3 cf9aa91
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Jul 2 11:20:34 2021 -0400
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       api/wow.rb
+
+[33mcommit e64aec3e19196b93290c4a8f20a5e6c1222003b1[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Jul 2 11:19:38 2021 -0400
+
+    test searchable
+
+[33mcommit 18d1ad936c1da4db3812c03d2fad60de930b4f42[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 11:35:02 2021 -0400
+
+    fix search connected realm
+
+[33mcommit cf9aa91e99a7cbfa7c191a0c135ca43d8ee1bafc[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 11:30:41 2021 -0400
+
+    Update wow.rb
+
+[33mcommit fe7c88c0efce44a37ef668dd0aabc43265446a3d[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 11:04:21 2021 -0400
+
+    Update wow.rb
+
+[33mcommit d38a1afe068d98f596a09291baae3450db74e0fc[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 11:02:32 2021 -0400
+
+    Update wow.rb
+
+[33mcommit 2ce2c2980d54a46776a5dc6f395e26501774d668[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 10:35:48 2021 -0400
+
+    Update wow.rb
+
+[33mcommit cc3cfe697afc25b0af377662a3ca063183ed17a8[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 10:31:46 2021 -0400
+
+    adding connected realm search endpoint
+
+[33mcommit 1a3e2d59ce12893c4df489a2dca0461bdacde5d8[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Jun 1 10:29:20 2021 -0400
+
+    adding connected realm search endpoint
+
+[33mcommit c52108c33dce23c5a9703abc13fb0f3e39a7d3c0[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri May 14 15:49:33 2021 -0400
+
+    revert to Ruby 2.7
+
+[33mcommit 23c00574788b1c696767298df3d88acd1f25a6a9[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri May 14 15:21:02 2021 -0400
+
+    Deploy
+
+[33mcommit 258bfc8ec105a29000bc66789e9f9440c4de9501[m
+Merge: 5c91e04 24a1d21
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri May 14 15:16:12 2021 -0400
+
+    Merge branch 'francis-schiavo:master' into master
+
+[33mcommit 24a1d219f731da85f3006301b019470a04385bd7[m
+Merge: 670fe2e 7e4b882
+Author: Francis Schiavo <51870746+francis-schiavo@users.noreply.github.com>
+Date:   Fri May 14 16:08:01 2021 -0300
+
+    Ruby 3.0.0 support
+    
+    Force install of thin web server
+
+[33mcommit 7e4b8825e96e20678d3b85a3cc98854328da4b6a[m[33m ([m[1;31morigin/ruby3[m[33m)[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri May 14 16:06:33 2021 -0300
+
+    Fix rubocop warnings
+
+[33mcommit d6b3ac35ff005c2bbddffdf0dab1f2796e691330[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri May 14 15:48:26 2021 -0300
+
+    Force install of thin web server
+
+[33mcommit 5c91e04dcb903ef8c2695ee0e3d1e718a0751f8d[m
+Merge: dc1da31 e7d0f65
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 08:04:21 2021 -0400
+
+    Merge pull request #8 from alexchaoss/revert-7-master
+    
+    Revert "Update to Ruby 3.0.0"
+
+[33mcommit 670fe2ec9f5604d1318237b32789162d0ddbdbfb[m[33m ([m[1;33mtag: v1.0.0[m[33m)[m
+Merge: ab58adc 58ad1d0
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 08:03:29 2021 -0400
+
+    Merge pull request #6 from francis-schiavo/revert-5-revert-7-master
+    
+    Revert "Revert 7 master"
+
+[33mcommit 58ad1d02f2c5a728c18a4ab4fa9b57cd511585dc[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 08:03:21 2021 -0400
+
+    Revert "Revert 7 master"
+
+[33mcommit ab58adc7f6b02e64153bec77d09b0bcaeccd5eaa[m
+Merge: 0a73a03 e7d0f65
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 08:01:21 2021 -0400
+
+    Merge pull request #5 from alexchaoss/revert-7-master
+    
+    Revert 7 master
+
+[33mcommit e7d0f6556d24b912bdc75940345fb4e35fa3772c[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 07:59:48 2021 -0400
+
+    Revert "Update to Ruby 3.0.0"
+
+[33mcommit dc1da31fb60898bfae868ed0d63283248150ae0b[m
+Merge: 5ac09d9 0a73a03
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 07:51:37 2021 -0400
+
+    Merge pull request #7 from francis-schiavo/master
+    
+    Update to Ruby 3.0.0
+
+[33mcommit 0a73a039438743f09e831dceffbf39656636e70b[m
+Merge: c2dd750 5ac09d9
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu May 13 07:51:27 2021 -0400
+
+    Merge branch 'master' into master
+
+[33mcommit c2dd75055508e57739b8ada134dca88b9c83fb50[m
+Merge: 14811fc 27e68c0
+Author: Francis Schiavo <51870746+francis-schiavo@users.noreply.github.com>
+Date:   Wed May 12 22:49:02 2021 -0300
+
+    Merge pull request #4 from francis-schiavo/ruby3
+    
+    Upgrade to Ruby v3.0.0
+
+[33mcommit 27e68c079c0be84d27333d624eedb181b16715d8[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Wed May 12 22:46:30 2021 -0300
+
+    Upgrade to Ruby v3.0.0
+
+[33mcommit 14811fc18386a552ef060836f3c4c492ff7f066a[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Mon May 3 23:19:48 2021 -0300
+
+    Update dependencies
+
+[33mcommit 5ac09d9e409a90ec9ded8972bcab516fcbad1e3e[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Mar 26 09:26:29 2021 -0400
+
+    fix support cn
+
+[33mcommit cc4f248ba51352999e60990d96f7e2397883124e[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Mar 26 09:21:01 2021 -0400
+
+    fix cn support
+
+[33mcommit 6201eb028cf1631d0e92dd9f6c508c898dfab0ea[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Mar 26 09:19:36 2021 -0400
+
+    add cn support
+
+[33mcommit 50fbddd2fed775c92fc4baf85ba7baf5a4a6fd20[m
+Merge: 0ad1ee9 10d801e
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Mar 19 11:14:25 2021 -0400
+
+    Merge pull request #6 from francis-schiavo/master
+    
+    add missing params to guild/activity
+
+[33mcommit 10d801ebf30131c672cee69ad649138b75d8c9bf[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Fri Mar 19 11:13:05 2021 -0400
+
+    add missing params to guild/activity
+
+[33mcommit 0ad1ee973bbe67b0fb93f8e9c509cbec8be92882[m
+Merge: 5fdbda3 797e6a5
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Thu Feb 11 14:44:34 2021 -0500
+
+    Merge pull request #5 from francis-schiavo/master
+    
+    update
+
+[33mcommit 797e6a51102edf24311050dfde5bdaad31b4d880[m
+Author: Francis Schiavo <51870746+francis-schiavo@users.noreply.github.com>
+Date:   Thu Jan 7 09:44:41 2021 -0300
+
+    Update README.md
+
+[33mcommit 8b3f9c972fbade7ad30f1a5914815b60d4bff271[m
+Author: Francis Schiavo <51870746+francis-schiavo@users.noreply.github.com>
+Date:   Thu Jan 7 09:43:44 2021 -0300
+
+    Update README.md
+
+[33mcommit cd045d4cd6a3ba25dc18137bcc90e6462cd4ef4f[m
+Author: Francis Schiavo <51870746+francis-schiavo@users.noreply.github.com>
+Date:   Thu Jan 7 09:42:08 2021 -0300
+
+    Update README.md
+
+[33mcommit a5c69c127b54de28b5ff87b6c586365d3b8809ae[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Wed Dec 23 13:58:30 2020 -0500
+
+    update tech_tree function name to match API
+
+[33mcommit 5fdbda380c9549b24e39a0a909730527db824c43[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Wed Dec 23 13:37:25 2020 -0500
+
+    update tech_talent_tree function names
+
+[33mcommit e0bdebc337d2a2c1042f6b976a385e13c56ffa14[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:18:19 2020 -0500
+
+    Update sc2.rb
+
+[33mcommit f75be850c1fac16881827f252b72ce1aa9067ae5[m
+Merge: 52c68d7 ab049c6
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:16:02 2020 -0500
+
+    Merge branch 'master' of https://github.com/alexchaoss/blizzard-api-proxy
+
+[33mcommit 52c68d71154b8ad1070104a27fb735644501c216[m
+Merge: f2e379a 1bd3f0c
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:14:59 2020 -0500
+
+    Merge remote-tracking branch 'upstream/master'
+
+[33mcommit ab049c6d196583e283e1c35f1419e84060012943[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:09:17 2020 -0500
+
+    Update sc2.rb
+
+[33mcommit f2e379afb39269ea07815d38267371dff49a8be8[m
+Merge: 25e8cac 9a7c59e
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:05:10 2020 -0500
+
+    Merge branch 'master' of https://github.com/alexchaoss/blizzard-api-proxy
+
+[33mcommit 25e8cacf6ae1ca8bd9036ca5761c91c2af4a645a[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Dec 19 00:04:58 2020 -0500
+
+    Update sc2.rb
+
+[33mcommit 1bd3f0cb2550706868de5194095d33e1d9653c37[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Dec 18 21:56:06 2020 -0300
+
+    Added SC2 legacy endpoints
+
+[33mcommit 9a7c59e9b6d58a4737039befe168b3017202e920[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Mon Dec 14 17:21:41 2020 -0500
+
+    Update sc2.rb
+
+[33mcommit 96eee06e631f9bea850ecf8f7077732d85e6132e[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Mon Dec 14 17:07:32 2020 -0500
+
+    add sc2 legacy endpoints
+
+[33mcommit 12a27edcea2a32f95f8bf6311dd120e018b42379[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Nov 21 17:34:12 2020 -0500
+
+    comment cn endpoints
+
+[33mcommit e60127788f55049c9c185e4b8e7442f98219ad85[m
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Nov 21 17:26:19 2020 -0500
+
+    add CN region
+
+[33mcommit 2a46b0d6e911a375a3a19265945560312634696a[m
+Merge: 0ef6512 60ff8b4
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Nov 17 21:31:19 2020 -0500
+
+    Merge pull request #3 from francis-schiavo/master
+    
+    New Shadowlands endpoints (Convenants, Conduits, etc)
+
+[33mcommit 60ff8b426648861af8a6f61756d8ada786ba23e7[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Tue Nov 17 23:28:16 2020 -0300
+
+    New Shadowlands endpoints (Convenants, Conduits, etc)
+
+[33mcommit 0ef651267c8ca02d52e945492f538bdc2f04b25d[m
+Merge: 208d40a 3fbddf5
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Tue Nov 17 08:35:37 2020 -0500
+
+    Merge pull request #2 from francis-schiavo/master
+    
+    Fix D3 era endpoints
+
+[33mcommit 3fbddf57f611973815e1f382fc8fc27d96986c91[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Tue Nov 17 08:26:56 2020 -0300
+
+    Fix D3 era endpoints
+
+[33mcommit 208d40a56eb7d837cbbda40c2067496e657f5829[m
+Merge: 614ef0c e8df93a
+Author: alexchaoss <45114914+alexchaoss@users.noreply.github.com>
+Date:   Sat Oct 24 12:53:57 2020 -0400
+
+    Merge pull request #1 from francis-schiavo/master
+    
+    Update fork
+
+[33mcommit e8df93abe79ef67ade8a4171e0c4c33291a2585a[m
+Merge: 614ef0c 279c25f
+Author: Francis <francischiavo@gmail.com>
+Date:   Sat Oct 24 00:53:00 2020 +0000
+
+    Merge branch 'modified_crafting_endpoints' into 'master'
+    
+    Added modified crafting endpoints
+    
+    See merge request francisschiavo/blizzard-api-proxy!1
+
+[33mcommit 279c25f525f5036532f7dd2a7af5c729116cfe3b[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Oct 23 21:49:38 2020 -0300
+
+    Added modified crafting endpoints
+
+[33mcommit 614ef0cb507b3b3dbf979741dfa8fef3de4ec6a5[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Jun 12 01:54:13 2020 -0300
+
+    Enabled gzip compression and add an endpoint for downloading guild roster in batches
+
+[33mcommit cc5b9c74c9d15d812aebdeaf9980cfddd49999aa[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Tue Jun 9 19:10:33 2020 -0300
+
+    Added support to new classic and retail endpoints
+
+[33mcommit 26b18833a52fdecdb461a7d51b1d5ebd74240f84[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Mon Apr 27 11:22:50 2020 -0300
+
+    Expose API status code
+
+[33mcommit 10d05e5dc7c923de9a496930b61990d48d5c99fc[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Apr 17 19:28:54 2020 -0300
+
+    Updated API gem
+
+[33mcommit 6d46264cb3d059a14dc531f1bf0574c79c4ba5f4[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Apr 16 23:26:47 2020 -0300
+
+    Added new endpoints and fixed D3 and SC2 profile endpoints
+
+[33mcommit cadf98344ee6a9415179c533bbd01da6bb5972da[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 23:05:07 2020 -0300
+
+    Fix complete endpoint
+
+[33mcommit 61d07ba0de4acb4e174a27f25ac10fea70a20957[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 23:02:16 2020 -0300
+
+    Fix complete endpoint
+
+[33mcommit c1d6709d585c4a27d31dfa52f59c2d6ffb64a843[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 22:51:46 2020 -0300
+
+    Enable additional options
+
+[33mcommit 2c204f46142c4e04002ce2ce96ba7b3ec7c19d96[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 22:49:19 2020 -0300
+
+    Enable classic option for wow
+
+[33mcommit 293ff0b0098682b687ddd2d3aedd19cf553f421c[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 22:33:08 2020 -0300
+
+    Hide user access_tokens
+
+[33mcommit a04a608d91daed5ed350eedcd199a8ef6c11d03d[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 21:10:08 2020 -0300
+
+    Fix oauth token endpoint
+
+[33mcommit a1f6050f7b5741dc33706522bb79f35de74b45e2[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Sat Apr 11 19:56:49 2020 -0300
+
+    Added CORS protection and locale parameter
+
+[33mcommit 23565ddc94c6aabb230307b9b1b12070ec17857d[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Apr 10 17:43:15 2020 -0300
+
+    Allow region as query string
+
+[33mcommit 3b2c3e3bb20070cb3e1feeb3ab333494d86329ca[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Fri Apr 10 17:38:41 2020 -0300
+
+    Allow region as query string
+
+[33mcommit d568f8ba462669c6e123d5734ed812384e18798c[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Apr 9 22:55:26 2020 -0300
+
+    Add Procfile
+
+[33mcommit 2279d810b4947028c9194d658a82bce4beed55b0[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Apr 9 22:49:20 2020 -0300
+
+    Add config.ru
+
+[33mcommit b40d946da7d067dcbe6028a446f70e0bf686077a[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Apr 9 22:35:26 2020 -0300
+
+    Add config.ru
+
+[33mcommit 289fc066e060a9e0300db5473cf1f1fcf38b424c[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Apr 9 22:07:41 2020 -0300
+
+    Added support for all games
+
+[33mcommit 604ae07b1a315abc94d7e1f74394f5c68921122c[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Mar 5 01:44:42 2020 -0300
+
+    Enhanced profile
+
+[33mcommit e61c459478149197da20b9cdcfe0b1bdafa4f73c[m
+Author: Francis Schiavo <francischiavo@gmail.com>
+Date:   Thu Mar 5 01:13:56 2020 -0300
+
+    Update latest endpoints
+
+[33mcommit 1517ce177cb51d21eaf2ddf81cc3799c8de7300d[m
+Author: Francis Schiavo <francis.schiavo@francisschiavo.com>
+Date:   Fri Nov 15 01:54:04 2019 -0300
+
+    Initial release
