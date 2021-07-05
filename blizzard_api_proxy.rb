@@ -38,6 +38,11 @@ before do
                              value
                            end
   end
+  next unless @request.post?
+
+  @request.body.rewind
+  payload = @request.body.read
+  @body = JSON.parse payload, symbolize_names: true
 end
 
 not_found do

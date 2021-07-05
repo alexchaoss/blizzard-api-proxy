@@ -51,6 +51,15 @@ get '/data/wow/media/azerite-essence/:id' do |id|
   wow_api_client.azerite_essence(@region).media(id, **@options)&.to_json
 end
 
+post '/data/wow/search/azerite-essence' do
+  response = wow_api_client.azerite_essence(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
+end
+
 # Connected Realm API
 
 get '/data/wow/connected-realm/index' do
@@ -61,8 +70,13 @@ get '/data/wow/connected-realm/:id' do |id|
   wow_api_client.connected_realm(@region).get(id, **@options)&.to_json
 end
 
-get '/data/wow/search/connected-realm/' do 
-  wow_api_client.connected_realm(@region).search(@options).to_json
+post '/data/wow/search/connected-realms' do
+  response = wow_api_client.connected_realm(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
 end
 
 # Covenant API
@@ -125,6 +139,15 @@ get '/data/wow/media/creature-display/:id' do |id|
   wow_api_client.creature(@region).display_media(id, **@options)&.to_json
 end
 
+post '/data/wow/search/creature' do
+  response = wow_api_client.creature(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
+end
+
 # Guild Crest API
 
 get '/data/wow/guild-crest/index' do
@@ -161,6 +184,15 @@ get '/data/wow/media/item/:id' do |id|
   wow_api_client.item(@region).media(id, **@options)&.to_json
 end
 
+post '/data/wow/search/item' do
+  response = wow_api_client.item(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
+end
+
 # Journal API
 
 get '/data/wow/journal-expansion/index' do
@@ -179,12 +211,32 @@ get '/data/wow/journal-encounter/:id' do |id|
   wow_api_client.journal(@region).encounter(id, **@options)&.to_json
 end
 
+post '/data/wow/search/journal-encounter' do
+  response = wow_api_client.journal(@region).encounter_search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
+end
+
 get '/data/wow/journal-instance/index' do
   wow_api_client.journal(@region).instances(**@options)&.to_json
 end
 
 get '/data/wow/journal-instance/:id' do |id|
   wow_api_client.journal(@region).instance(id, **@options)&.to_json
+end
+
+# Media search
+
+post '/data/wow/search/media' do
+  response = wow_api_client.media(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
 end
 
 # Modified Crafting API
@@ -217,6 +269,15 @@ end
 
 get '/data/wow/mount/:id' do |id|
   wow_api_client.mount(@region).get(id, **@options)&.to_json
+end
+
+post '/data/wow/search/mount' do
+  response = wow_api_client.mount(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
 end
 
 # Mythic Keystone Affix API
@@ -463,6 +524,15 @@ get '/data/wow/realm/:realm' do |realm|
   wow_api_client.realm(@region).get(realm, **@options)&.to_json
 end
 
+post '/data/wow/search/realm' do
+  response = wow_api_client.realm(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
+end
+
 # Region API
 
 get '/data/wow/region/index' do
@@ -499,6 +569,15 @@ end
 
 get '/data/wow/media/spell/:id' do |id|
   wow_api_client.spell(@region).display_media(id, **@options)&.to_json
+end
+
+post '/data/wow/search/spell' do
+  response = wow_api_client.spell(@region).search(@body.fetch(:page, 1), @body.fetch(:page_size, 100)) do |search_options|
+    @body[:query].each do |key, value|
+      search_options.where(key, value)
+    end
+  end
+  response&.to_json
 end
 
 # Talents API
