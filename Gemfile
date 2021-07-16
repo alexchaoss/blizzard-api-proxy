@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.0.0'
+ruby '3.0.1'
 
 gem 'blizzard_api', git: 'https://github.com/alexchaoss/blizzard_api'
 gem 'e2mmap'
