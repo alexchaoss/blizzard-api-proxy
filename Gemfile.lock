@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/alexchaoss/blizzard_api
-  revision: 4c7e65a1d0467caefdcb6cdd2f1d797e7b0816a9
+  revision: 23962fe37eb71b406be335b69d753a3fb7c430b2
   specs:
-    blizzard_api (0.6.3)
+    blizzard_api (0.6.4)
       redis (~> 4.1, >= 4.1.0)
       thwait (~> 0.2.0)
 
@@ -17,7 +17,7 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     parallel (1.20.1)
-    parser (3.0.1.1)
+    parser (3.0.2.0)
       ast (~> 2.4.1)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -26,7 +26,7 @@ GEM
     redis (4.3.1)
     regexp_parser (2.1.1)
     rexml (3.2.5)
-    rubocop (1.18.2)
+    rubocop (1.18.3)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -35,10 +35,10 @@ GEM
       rubocop-ast (>= 1.7.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.7.0)
+    rubocop-ast (1.8.0)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
