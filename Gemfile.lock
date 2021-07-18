@@ -1,15 +1,10 @@
-GIT
-  remote: https://github.com/alexchaoss/blizzard_api
-  revision: 23962fe37eb71b406be335b69d753a3fb7c430b2
-  specs:
-    blizzard_api (0.6.4)
-      redis (~> 4.1, >= 4.1.0)
-      thwait (~> 0.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    blizzard_api (0.6.4)
+      redis (~> 4.1, >= 4.1.0)
+      thwait (~> 0.2.0)
     daemons (1.4.0)
     e2mmap (0.1.0)
     eventmachine (1.2.7)
@@ -59,7 +54,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  blizzard_api!
+  blizzard_api
   e2mmap
   rubocop
   sinatra
