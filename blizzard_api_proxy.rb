@@ -19,6 +19,7 @@ BlizzardApi.configure do |config|
     config.use_cache = true
     config.redis_host = ENV.fetch 'REDIS_HOST', ''
     config.redis_port = ENV.fetch 'REDIS_PORT', ''
+    config.cache_access_token = ENV.fetch('CACHE_ACCESS_TOKEN', 'true').eql? 'true'
   end
 end
 
