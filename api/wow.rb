@@ -590,6 +590,14 @@ get '/data/wow/talent/:id' do |id|
   wow_api_client.talent(@region).get(id, **@options)&.to_json
 end
 
+get '/data/wow/talent-tree/index' do
+  wow_api_client.talent(@region).talent_trees(**@options)&.to_json
+end
+
+get '/data/wow/talent-tree/:talent_tree_id/playable-specialization/:spec_id' do |talent_tree_id, spec_id|
+  wow_api_client.talent(@region).talent_tree(talent_tree_id, spec_id, **@options)&.to_json
+end
+
 get '/data/wow/pvp-talent/index' do
   wow_api_client.talent(@region).pvp_talents(**@options)&.to_json
 end
