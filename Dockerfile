@@ -9,7 +9,7 @@ ADD Gemfile.lock /proxy/Gemfile.lock
 RUN gem install bundler
 RUN bundle install
 
-ADD ./blizzard_api_proxy.rb /proxy/blizzard_api_proxy.rb
+ADD . /proxy/
 
 EXPOSE 4567
 
