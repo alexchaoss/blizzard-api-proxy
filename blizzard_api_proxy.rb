@@ -3,7 +3,7 @@
 require 'sinatra'
 require 'sinatra/cors'
 require 'blizzard_api'
-COMMON_OPTIONS = %w[locale classic ignore_cache ttl].freeze
+COMMON_OPTIONS = %w[region locale classic ignore_cache ttl].freeze
 
 set :bind, '0.0.0.0'
 set :allow_origin, ENV.fetch('CORS_ORIGIN', '*')
@@ -24,8 +24,6 @@ end
 
 before do
   content_type :json
-  @region = BlizzardApi.region
-  @region = @request.params['region'] if @request.params.key? 'region'
   @options = {}
   @request.params.each do |key, value|
     next unless COMMON_OPTIONS.include? key
