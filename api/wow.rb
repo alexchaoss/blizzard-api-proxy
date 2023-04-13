@@ -162,6 +162,16 @@ get '/data/wow/media/guild-crest/emblem/:id' do |id|
   wow_api_client.guild_crest(**@options).emblem_media(id, **@options)&.to_json
 end
 
+# Heirlooms
+
+get '/data/wow/heirloom/index' do
+  wow_api_client.heirloom(**@options).index(**@options)&.to_json
+end
+
+get '/data/wow/heirloom/:id' do |id|
+  wow_api_client.heirloom(**@options).get(id, **@options)&.to_json
+end
+
 # Item API
 
 get '/data/wow/item-class/index' do
@@ -594,6 +604,10 @@ get '/data/wow/talent-tree/index' do
   wow_api_client.talent(**@options).talent_trees(**@options)&.to_json
 end
 
+get '/data/wow/talent-tree/:talent_tree_id' do |talent_tree_id|
+  wow_api_client.talent(**@options).talent_tree_nodes(talent_tree_id, **@options)&.to_json
+end
+
 get '/data/wow/talent-tree/:talent_tree_id/playable-specialization/:spec_id' do |talent_tree_id, spec_id|
   wow_api_client.talent(**@options).talent_tree(talent_tree_id, spec_id, **@options)&.to_json
 end
@@ -642,6 +656,16 @@ end
 
 get '/data/wow/token/index' do
   wow_api_client.wow_token(**@options).get(**@options)&.to_json
+end
+
+# Toys
+
+get '/data/wow/toy/index' do
+  wow_api_client.toy(**@options).index(**@options)&.to_json
+end
+
+get '/data/wow/toy/:id' do |id|
+  wow_api_client.toy(**@options).get(id, **@options)&.to_json
 end
 
 # ######################################################################################################################
