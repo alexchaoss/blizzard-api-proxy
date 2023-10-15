@@ -1,15 +1,12 @@
-FROM ruby:3.0.0
+FROM ruby:3.2.2
 
 RUN mkdir /proxy
 WORKDIR /proxy
 
-ADD Gemfile /proxy/Gemfile
-ADD Gemfile.lock /proxy/Gemfile.lock
+COPY . /proxy/
 
 RUN gem install bundler
 RUN bundle install
-
-ADD . /proxy/
 
 EXPOSE 4567
 
