@@ -15,11 +15,7 @@ BlizzardApi.configure do |config|
   config.app_id = ENV.fetch 'BNET_APPLICATION_ID'
   config.app_secret = ENV.fetch 'BNET_APPLICATION_SECRET'
 
-  if ENV.fetch('USE_CACHE', 'false') == 'true'
-    config.use_cache = true
-    config.redis_host = ENV.fetch 'REDIS_HOST', ''
-    config.redis_port = ENV.fetch 'REDIS_PORT', ''
-  end
+  config.redis_url = ENV.fetch 'REDIS_URL'
 end
 
 before do

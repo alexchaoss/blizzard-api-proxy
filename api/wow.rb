@@ -203,6 +203,24 @@ post '/data/wow/search/item' do
   response&.to_json
 end
 
+# Item appearance API
+
+get '/data/wow/item-appearance/sets/index' do
+  wow_api_client.item_appearance(**@options).sets&.to_json
+end
+
+get '/data/wow/item-appearance/sets/:id' do |id|
+  wow_api_client.item_appearance(**@options).set(id, **@options)&.to_json
+end
+
+get '/data/wow/item-appearance/slots/index' do
+  wow_api_client.item_appearance(**@options).slots(**@options)&.to_json
+end
+
+get '/data/wow/item-appearance/slots/:id' do |id|
+  wow_api_client.item_appearance(**@options).slot(id, **@options)&.to_json
+end
+
 # Journal API
 
 get '/data/wow/journal-expansion/index' do
@@ -771,7 +789,7 @@ get '/profile/wow/character/:realm/:character/quests' do |realm, character|
 end
 
 get '/profile/wow/character/:realm/:character/quests/completed' do |realm, character|
-  wow_api_client.character_profile(**@options).quests(realm, character, **{ completed: true }.merge(@options))&.to_json
+  wow_api_client.character_profile(**@options).quests(realm, character, completed: true, **@options)&.to_json
 end
 
 # Character Soulbinds API
